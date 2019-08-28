@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fox Paymaster</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="login">
+        <div id="login-container">
+            <h1>FoxPaymaster</h1>
+            <p>Fox Paymaster is a payment web app with simple user interface and easy to use. Fox Paymaster also will help you through your store payment problem. Fox Payfazz is a web application. Made using only HTML, CSS and Javascript. This web app aims only educational purposes. For further information you can contact me on aldinofrizal@gmail.com.</p>
+            <button class="btn">Get Started!</button>
+        </div>
+        
+    </section>
+    <header>
+        <p>FoxPaymaster</p>
+        <span class="btn" id=addItemBtn>ADD ITEM</span>
+    </header>
+    <section id="addItem">
+        <div id="addItemImg"></div>
+        <form id="addForm" action="">
+            <span id="closeFormBtn">x</span>
+            <p>ADD ITEM TO YOUR SHOP</p>
+            <label for="GET-name">Item Name</label>
+            <input id="GET-name" maxlength="13" autocomplete="off"  type="text" name="name" placeholder="ex: Lorem Ipsum" value="">
+            <label for="GET-price">Price</label>
+            <input id="GET-price" autocomplete="off"  type="number" min="0" max="100000000" step="1000" name="price" placeholder="ex: 50000">
+            <label id="getImage" class="btn" for="GET-image">UPLOAD IMAGE
+                <input id="GET-image" size="60" autocomplete="off" onchange="updateFilename(this.value)" type="file" name="image">
+            </label>
+            <p id="filename"></p>
+            <label for="GET-description">Description</label>
+            <textarea name="description" maxlength="120" autocomplete="off"  id="GET-description" placeholder="ex: Lorem ipsum dolor sit amet, consectetur adipiscing elit" rows="3"></textarea>
+            <div class="button-group">
+                <p id="alertmsg"></p>
+                <button class="btn btn-submit" type="submit">ADD ITEM</button>
+                <button class="btn" id="btn-cancel" style="background-color: white; color: #4ecdc4;">CANCEL</button>
+            </div>
+        </form>
+    </section>
+    <section id="main-page">
+        <div id="catalog">
+            <!-- <div class = "cards">
+               <div class="card-img"></div>
+               <div class="addToCart">+</div>
+               <div class="card-content">
+                    <p>Korean Soju</p>
+                    <span>5000 FRP</span>
+                    <span>Contain 300ml orignial soju made in Korea, with original taste of korea. Ready to fresh your body.</span>
+                    <span class="delete">delete</span>
+                </div>
+            </div> -->
+        </div>
+        <div id="cart">
+            <p id="cart-title">CART</p>
+            <div id="cart-list-container">
+                <!-- <div class="cart-list">
+                    <span>Coca Cola</span>
+                    <span class="cart-price">5000 FRP</span>
+                    <span class="cart-delete">x</span>
+                </div> -->
+            </div>
+            <div id="cartBtn">
+                <button class="btn calculateCart">CHECK OUT</button>
+                <button class="btn clearCart">CLEAR</button>
+            </div>
+        </div>
+        <!-- -------------------------------------------- -->
+        <div id="warning">
+            <p>Are you sure you want to delete this item?</p>
+            <div id="warning-btn-wrapper">
+                <button class="btn yesDelete">YES</button>
+                <button class="btn noDelete" id="btn-cancel"  style="background-color: white; color: #4ecdc4;">NO</button>
+            </div>
+        </div>
+
+        <div id="checkoutPayment">
+            <div id="paymentImg"></div>
+            <div id=paymentContainer>
+                <p id="paymentTitle">Complete Transaction</p>
+                <div id="timepayment">
+                        <p></p>
+                </div>
+                <div id="paymentlist-container">
+                    <!-- <div class="payment-list">
+                        <span>Testing</span>
+                        <span class="cart-price">5000 FRP</span>
+                    </div>
+                    <div class="payment-list">
+                        <span>Testing Item</span>
+                        <span class="cart-price">5000 FRP</span>
+                    </div> -->
+                </div>
+                <div id="totalpayment">
+                        <span>Total</span>
+                        <span></span>
+                </div>
+                <div id="paymentBtn">
+                    <button class="btn completePayment">COMPLETE TRANSACTION</button>
+                    <button class="btn cancelPayment">CANCEL</button>
+                </div>
+            </div>
+
+            <div id="successPayment">
+                <img src="kuda.png" alt="">
+                <h3>Yay it's done</h3>
+                <p>Transaction successful! You are awesome, you have made your boss richer</p>
+                <button class="btn donePayment">CLOSE</button>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
