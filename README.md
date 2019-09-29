@@ -4,5 +4,5 @@ Fox Paymaster is a payment web app with simple user interface and easy to use. F
 upload image feature will not work, because this project did not use database or storage feature. But if you want to try or test, you can download all the files and save your image into /img folder, and it will work properly
 for proper experience, use mozilla firefox to open this web app 
 
-i expect any suggestion and feedback for this project. Thank you! 
-
+i expect any suggestion and feedback for this project. Thank you!
+test
